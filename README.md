@@ -1,6 +1,7 @@
-TLS Certificate Manage SDK
-==========================
-A package to facilitate interfacing with Programster's TLS certificate manager service.
+TLS Certificate Manager SDK
+===========================
+A package to facilitate interfacing with Programster's 
+[TLS certificate manager](https://github.com/programster/TLS-Certificate-Manager).
 
 
 ## Example Usage
