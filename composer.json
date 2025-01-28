@@ -1,0 +1,42 @@
+{
+    "name": "programster/cert-manager",
+    "type": "library",
+    "description": "An SDK for interfacing with Programster's TLS certificate manager",
+    "keywords": ["sdk", "certificate-manager", "TLS"],
+    "homepage": "https://github.com/programster/package-tls-cert-manager-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stuart Page",
+            "email": "sdpagent@gmail.com",
+            "homepage": "https://blog.programster.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.3.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "programster/collections": "^0.1.0"
+    },
+    "require-dev": {
+        "symfony/http-client": "^5.3",
+        "guzzlehttp/guzzle" : "^7.3",
+        "guzzlehttp/psr7" : "^2.0",
+        "programster/core-libs" : "2.1.*",
+        "fakerphp/faker": "^1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Programster\\CertManager\\": "src/",
+            "Programster\\CertManager\\Models\\": "src/models/",
+            "Programster\\CertManager\\Exceptions\\": "src/exceptions/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Programster\\CertManager\\Testing\\": "testing/",
+            "Programster\\CertManager\\Testing\\Tests\\": "testing/tests/"
+        }
+    }
+}
