@@ -2,14 +2,14 @@
 
 namespace Programster\CertManager\Models;
 
-class CertificateBundle
+readonly class CertificateBundle
 {
     public function __construct(
-        public readonly string $name,
-        public readonly string $cert,
-        public readonly string $chain,
-        public readonly string $fullchain,
-        public readonly string $privateKey,
+        public string $name,
+        public string $cert,
+        public string $chain,
+        public string $fullchain,
+        public string $privateKey,
     )
     {
 

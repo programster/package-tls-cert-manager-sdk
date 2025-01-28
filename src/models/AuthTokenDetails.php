@@ -8,13 +8,13 @@
 
 namespace Programster\CertManager\Models;
 
-class AuthTokenDetails
+readonly class AuthTokenDetails
 {
     public function __construct(
-        public readonly string $id,
-        public readonly string $name,
-        public readonly AuthTokenLevel $level,
-        public readonly string $description,
+        public string         $id,
+        public string         $name,
+        public AuthTokenLevel $level,
+        public string         $description,
     )
     {
 

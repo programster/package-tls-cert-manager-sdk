@@ -16,6 +16,7 @@ use Programster\CertManager\Models\CertificateBundleSet;
 use Programster\CertManager\Models\CertificateBundleSetItem;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 class CertManagerClient
@@ -188,7 +189,7 @@ class CertManagerClient
     }
 
 
-    public function getCertificateBundle(string $id)
+    public function getCertificateBundle(string $id) : CertificateBundle
     {
         $endpoint = "/api/certs/{$id}";
         $method = "GET";
@@ -316,7 +317,7 @@ class CertManagerClient
     }
 
 
-    private function createRequest(string $method, string $endpoint, ?array $body = null, array $headers = [])
+    private function createRequest(string $method, string $endpoint, ?array $body = null, array $headers = []) : RequestInterface
     {
         $httpBasicAuthValue = "Basic " . base64_encode("{$this->authTokenId}:{$this->authTokenSecret}");
 

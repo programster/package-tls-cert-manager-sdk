@@ -2,12 +2,12 @@
 
 namespace Programster\CertManager\Models;
 
-class CertificateBundleSetItem
+readonly class CertificateBundleSetItem
 {
     public function __construct(
-        public readonly string $id,
-        public readonly string $name,
-        public readonly AuthTokenDetailsCollection $authTokens,
+        public string                     $id,
+        public string                     $name,
+        public AuthTokenDetailsCollection $authTokens,
     )
     {
 
